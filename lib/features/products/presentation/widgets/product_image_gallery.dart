@@ -22,7 +22,6 @@ class ProductImageGallery extends StatelessWidget {
 
     return Stack(
       children: [
-        // 1. The Main Image Slider Viewport
         SizedBox(
           height: 220.h,
           child: PageView.builder(
@@ -42,7 +41,7 @@ class ProductImageGallery extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 8.w, vertical: 4.h),
               decoration: BoxDecoration(
-                color: const Color(0xFF1A237E), // Deep Task Brand Navy
+                color: const Color(0xFF1A237E),
                 borderRadius: BorderRadius.circular(4.r),
               ),
               child: Text(

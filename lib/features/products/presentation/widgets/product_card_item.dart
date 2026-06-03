@@ -119,12 +119,10 @@ class ProductCardItem extends StatelessWidget {
               child: IconButton(
                 icon: Icon(
                   product.inWishlist == true ? Icons.favorite : Icons.favorite_border,
-                  // Changed from Colors.green to red to stay uniform across app screens
                   color: product.inWishlist == true ? Colors.red : Colors.grey[600],
                   size: 22.w,
                 ),
                 onPressed: () {
-                  // FIXED: Triggers the background state mutation loop instantly on touch event
                   context.read<ProductsListCubit>().toggleProductFavorite(product.slug ?? '');
                 },
               ),

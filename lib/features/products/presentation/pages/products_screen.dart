@@ -90,7 +90,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                     padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 4.h),
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      childAspectRatio: 0.61, // Tightened constraint to cleanly accommodate texts & actions safely
+                      childAspectRatio: 0.61,
                       crossAxisSpacing: 12.w,
                       mainAxisSpacing: 12.h,
                     ),
