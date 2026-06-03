@@ -48,10 +48,8 @@ class ProductsListCubit extends Cubit<ProductsListState> {
         final totalPages = entity.data?.pagination?.lastPage ?? 1;
         final currentPageNum = isRefresh ? 1 : state.currentPage;
 
-        // 1. READ LOCAL CACHE: Fetch current list of user choices
         final List<String> localFavorites = WishlistLocalManager.getFavoriteSlugs();
 
-        // 2. SYNCHRONIZE DATA: Intercept incoming entity elements and map them into synced models
         final List<ProductsEntity> syncedIncoming = incomingProducts.map((item) {
           if (item is ProductsModel) {
             final bool isSavedLocally = localFavorites.contains(item.slug);

@@ -86,7 +86,7 @@ class ProductsModel extends ProductsEntity {
       priceAfterDiscount: priceAfterDiscount,
       thumbnail: thumbnail,
       images: images,
-      inWishlist: inWishlist ?? this.inWishlist, // Changes this specific field
+      inWishlist: inWishlist ?? this.inWishlist,
       slug: slug,
       productStockCount: productStockCount,
       discount: discount,
